@@ -1,0 +1,126 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* General Styles */
+:root {
+  --darkCyan: hsl(185, 75%, 39%);
+  --darkBlue: hsl(229, 23%, 23%);
+  --darkGrayBlue: hsl(227, 10%, 46%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+/* Reset Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+/* Styling */
+body {
+  background-color: var(--darkCyan);
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1.8rem;
+}
+.profile-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(30rem, 35rem);
+  grid-template-rows: 14rem 14rem 9rem;
+  overflow: hidden;
+}
+
+.profile-card .profile-img {
+  background: url(/images/bg-pattern-card.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+
+.profile-card .profile-img img {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5rem;
+  border-radius: 50%;
+  border: 0.5rem solid white;
+}
+
+.card-content {
+  margin-top: 7.5rem;
+  text-align: center;
+}
+
+.card-content h2 span {
+  font-weight: 400;
+  color: var(--darkGrayBlue);
+}
+
+.card-content p {
+  font-size: 1.6rem;
+  color: var(--darkGrayBlue);
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  border-top: 1px solid rgb(215, 215, 215);
+}
+
+.statistics li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.statistics li span {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 59%);
+}
+/* .profile-card .pattern .profile-card .card-content > img {
+  border-radius: 50%;
+  border: 0.5rem solid white;
+  object-position: center;
+  margin-inline: auto;
+}
+
+.card-content h2 {
+}
+.card-content h2 span,
+.card-content p {
+  color: var(--darkGray);
+}
+
+.card-content p {
+  font-size: 1.5rem;
+}
+ */ ;
