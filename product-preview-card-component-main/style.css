@@ -129,7 +129,7 @@ p {
   max-width: 1.2rem;
 }
 
-@media only screen and (max-width: 375px) {
+/* @media only screen and (max-width: 375px) {
   .preview-card {
     flex-direction: column;
     min-height: 95%;
@@ -142,5 +142,24 @@ p {
   .card-img {
     background: url(/images/image-product-mobile.jpg) no-repeat;
     background-size: cover;
+  }
+} */
+
+@media (max-width: 640px) {
+  main.preview-card {
+    flex-direction: column;
+  }
+
+  main.preview-card .card-img {
+    height: 25rem;
+  }
+
+  .preview-card > div {
+    flex-basis: auto;
+  }
+
+  .card-content {
+    gap: 1.5rem;
+    padding: 2rem;
   }
 }
