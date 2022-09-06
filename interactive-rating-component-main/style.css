@@ -104,6 +104,7 @@ body {
 /* Component Styles */
 .rating-component {
   max-width: 41rem;
+  min-height: 40rem;
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -116,7 +117,7 @@ body {
   gap: 2rem;
 }
 
-.rating-component picture,
+.bg-circle,
 .rates .rate {
   background-color: var(--darkBlue);
   border-radius: 50%;
@@ -130,6 +131,14 @@ body {
 }
 .rating-component p {
   color: var(--midGrey);
+}
+
+.rate-result {
+  background-color: var(--darkBlue);
+  color: orange;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
 }
 
 .rates {
@@ -171,4 +180,8 @@ button.submitBtn:hover {
   color: orange;
   background-color: var(--white);
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
