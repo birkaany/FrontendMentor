@@ -150,7 +150,8 @@ body {
   cursor: pointer;
 }
 
-.rate.active {
+.rate.active,
+.rate.active:hover {
   background-color: var(--orange);
   color: var(--white);
 }
