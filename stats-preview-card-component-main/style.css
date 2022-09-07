@@ -7,6 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 :root {
@@ -91,3 +92,56 @@ select {
 }
 
 /* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  max-width: 110rem;
+  display: flex;
+}
+
+.container .text-content,
+.container .visual-content {
+  flex: 1;
+}
+
+.text-content {
+  background-color: var(--darkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.text-content h1 {
+  font-family: "Inter", sans-serif;
+}
+.text-content h1 span {
+  color: var(--softViolet);
+}
+.text-content p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.text-content .stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content .stats li {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+.text-content .stats li span {
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  display: block;
+  color: hsla(0, 0%, 100%, 0.75);
+}
