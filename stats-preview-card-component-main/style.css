@@ -60,13 +60,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -100,22 +93,27 @@ body {
 }
 
 .container {
-  max-width: 110rem;
   display: flex;
+  flex-direction: row;
+  max-width: 110rem;
+  border-radius: 0.5rem;
+  margin: 2rem;
 }
 
 .container .text-content,
 .container .visual-content {
-  flex: 1;
+  flex: 50%;
 }
 
 .text-content {
   background-color: var(--darkBlue);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: var(--white);
+  padding: 8rem;
+  border-radius: 1rem 0 0 1rem;
 }
 
 .text-content h1 {
@@ -131,17 +129,57 @@ body {
 .text-content .stats {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
 }
 
 .text-content .stats li {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
 }
 .text-content .stats li span {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.3rem;
   display: block;
   color: hsla(0, 0%, 100%, 0.75);
+}
+picture {
+  position: relative;
+  background-color: var(--softViolet);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.visual-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  picture {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .text-content {
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .text-content .stats {
+    flex-direction: column;
+  }
+  .text-content .stats li {
+    margin-bottom: 2rem;
+  }
 }
