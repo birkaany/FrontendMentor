@@ -5,6 +5,8 @@ $cyan: hsl(178, 100%, 50%);
 $darkBlue: hsl(216, 50%, 16%);
 $darkerBlue: hsl(215, 32%, 27%);
 $white: hsl(0, 0%, 100%);
+/* $primaryPadding: 2.4rem;
+$secondaryPadding: 0 2.4rem; */
 
 * {
   margin: 0;
@@ -18,6 +20,7 @@ html {
 
 body {
   font-size: 1.8rem;
+  color: $white;
   background-color: hsl(217, 54%, 11%);
   min-height: 100vh;
   display: flex;
@@ -26,21 +29,101 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-main.container {
-  width: 35rem;
-  min-height: 60rem;
-  background-color: $darkBlue;
-  border-radius: 2rem;
-  display: grid;
-  grid-template-rows: 35rem 16rem 8rem;
+p {
+  color: $softBlue;
+}
 
+a {
+  color: $white;
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+  &:hover {
+    color: $cyan;
+    transition: 300ms ease-in-out;
+  }
+}
+main {
+  max-width: 39rem;
+  min-height: 60rem;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 35rem 13rem 8rem;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 17px 12px 5px hsl(216deg 55% 10%),
+    -11px 32px 10px hsl(216deg 56% 9%);
   .nft-image {
+    aspect-ratio: 1;
+    position: relative;
+    &:hover:before {
+      content: url(/images/icon-view.svg);
+      width: 100%;
+      height: 100%;
+      background-color: hsl(178deg, 100%, 50%, 30%);
+      position: absolute;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: visible;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      padding: 2rem;
-      border-radius: 3rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .info-bar {
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 400;
+    }
+    > p {
+      margin-top: 1rem;
+      font-weight: 300;
+    }
+    .nft-info {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      & > div {
+        display: flex;
+      }
+      picture {
+        width: 2rem;
+      }
+      p {
+        font-weight: 300;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .nft-creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid $darkerBlue;
+    picture {
+      max-width: 4rem;
+      margin-right: 2rem;
+      img {
+        border: 0.1rem solid $white;
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    & {
+      width: 35rem;
+      grid-template-rows: 31rem 13rem 8rem;
     }
   }
 }
