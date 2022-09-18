@@ -46,6 +46,8 @@ main {
   gap: 2rem;
   padding: 2rem;
   box-shadow: 17px 12px 5px hsl(216deg, 55%, 10%), -11px 32px 10px hsl(216deg, 56%, 9%);
+  transform: scale(0.2);
+  transition: ease-in-out 1s;
 }
 main .nft-image {
   aspect-ratio: 1;
