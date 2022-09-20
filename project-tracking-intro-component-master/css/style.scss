@@ -26,6 +26,7 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  color: $greyBlue;
   &::before {
     content: "";
     width: 50%;
@@ -86,15 +87,47 @@ header {
   }
 }
 
-section {
+section.intro-banner {
   .container {
     display: flex;
-
+    align-items: center;
     .text-content,
     picture {
       flex: 1 0 50%;
       img {
         width: 200%;
+      }
+    }
+    .text-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      .sub-title {
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        color: $greyBlue;
+        font-size: 1.4rem;
+      }
+
+      .badge::before {
+        content: "New";
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        background-color: $veryDarkBlue;
+        padding: 0.5rem 1.3rem;
+        border-radius: 2rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        color: white;
+        margin-right: 2rem;
+      }
+      h1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700;
+        font-size: 6rem;
+        text-transform: uppercase;
+        color: $veryDarkBlue;
       }
     }
   }
