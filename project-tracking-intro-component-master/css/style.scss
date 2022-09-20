@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+$primaryColor: hsl(0, 100%, 68%);
+$veryDarkBlue: hsl(230, 29%, 20%);
+$darkGreyBlue: hsl(230, 11%, 40%);
+$greyBlue: hsl(231, 7%, 65%);
+$lightGreyBlue: hsl(207, 33%, 95%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  &::before {
+    content: "";
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $lightGreyBlue;
+    border-radius: 0 0 0 3rem;
+    z-index: -1;
+  }
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  margin: 6rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    picture {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    nav ul {
+      display: flex;
+      gap: 5rem;
+      li {
+        a {
+          text-transform: uppercase;
+          font-family: "Barlow Condensed", sans-serif;
+          font-weight: 700;
+          color: $veryDarkBlue;
+        }
+
+        &.acc-button {
+          list-style: disc;
+          color: $greyBlue;
+          a {
+            color: $greyBlue;
+          }
+        }
+        a:hover {
+          border-bottom: 1px solid;
+        }
+      }
+    }
+  }
+}
+
+section {
+  .container {
+    display: flex;
+
+    .text-content,
+    picture {
+      flex: 1 0 50%;
+      img {
+        width: 200%;
+      }
+    }
+  }
+}

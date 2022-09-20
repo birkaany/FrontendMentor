@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+body::before {
+  content: "";
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: hsl(207deg, 33%, 95%);
+  border-radius: 0 0 0 3rem;
+  z-index: -1;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  margin: 6rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .container picture img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .container nav ul {
+  display: flex;
+  gap: 5rem;
+}
+header .container nav ul li a {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: hsl(230deg, 29%, 20%);
+}
+header .container nav ul li.acc-button {
+  list-style: disc;
+  color: hsl(231deg, 7%, 65%);
+}
+header .container nav ul li.acc-button a {
+  color: hsl(231deg, 7%, 65%);
+}
+header .container nav ul li a:hover {
+  border-bottom: 1px solid;
+}
+
+section .container {
+  display: flex;
+}
+section .container .text-content,
+section .container picture {
+  flex: 1 0 50%;
+}
+section .container .text-content img,
+section .container picture img {
+  width: 200%;
+}/*# sourceMappingURL=style.css.map */
