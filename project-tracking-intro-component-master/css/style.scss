@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   position: relative;
   color: $greyBlue;
+  overflow-x: hidden;
   &::before {
     content: "";
     width: 50%;
@@ -43,6 +44,7 @@ body {
 .container {
   max-width: 110rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 
 header {
@@ -52,35 +54,70 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 
     picture {
       img {
-        width: 100%;
         object-fit: cover;
       }
     }
 
-    nav ul {
-      display: flex;
-      gap: 5rem;
-      li {
-        a {
-          text-transform: uppercase;
-          font-family: "Barlow Condensed", sans-serif;
-          font-weight: 700;
-          color: $veryDarkBlue;
+    nav {
+      .menuDesktop {
+        display: flex;
+        @media only screen and (max-width: 400px) {
+          display: none;
         }
+      }
 
-        &.acc-button {
-          list-style: disc;
-          color: $greyBlue;
-          a {
-            color: $greyBlue;
-          }
+      .menuMobile {
+        display: none;
+        @media only screen and (max-width: 400px) {
+          display: inherit;
         }
-        a:hover {
-          border-bottom: 1px solid;
+      }
+      ul {
+        display: flex;
+        gap: 5rem;
+        &.menuMobile {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          left: 50%;
+          top: 30%;
+          transform: translate(-50%, -50%);
+          background: white;
+          width: 90%;
+          text-align: center;
+          gap: 0;
+          padding: 2rem;
+          font-size: 2rem;
+          box-shadow: 2px 2px 15px rgb(84 84 84 / 22%);
+        }
+        li {
+          @media only screen and (max-width: 400px) {
+            padding: 2rem 1rem;
+          }
+          a {
+            text-transform: uppercase;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 700;
+            color: $veryDarkBlue;
+          }
+
+          &.acc-button {
+            list-style: disc;
+            color: $greyBlue;
+            @media only screen and (max-width: 400px) {
+              list-style: none;
+              border-top: 1px solid $greyBlue;
+            }
+            a {
+              color: $greyBlue;
+            }
+          }
+          a:hover {
+            border-bottom: 1px solid;
+          }
         }
       }
     }
@@ -91,6 +128,9 @@ section.intro-banner {
   .container {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 400px) {
+      flex-direction: column-reverse;
+    }
     .text-content,
     picture {
       flex: 1 0 50%;
@@ -105,9 +145,10 @@ section.intro-banner {
       gap: 2rem;
       .sub-title {
         text-transform: uppercase;
-        letter-spacing: 0.5rem;
+        letter-spacing: 0.4rem;
         color: $greyBlue;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        font-family: "Barlow Condensed", sans-serif;
       }
 
       .badge::before {
@@ -120,7 +161,7 @@ section.intro-banner {
         letter-spacing: 0.2rem;
         font-weight: 700;
         color: white;
-        margin-right: 2rem;
+        margin-right: 1rem;
       }
       h1 {
         font-family: "Barlow Condensed", sans-serif;
@@ -128,6 +169,31 @@ section.intro-banner {
         font-size: 6rem;
         text-transform: uppercase;
         color: $veryDarkBlue;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        a {
+          background: $primaryColor;
+          padding: 1.5rem 3.2rem;
+          border-radius: 5px;
+          color: white;
+          border: 1px solid $greyBlue;
+          letter-spacing: 0.1rem;
+          transition: 300ms ease-in-out;
+          &:hover {
+            background-color: hsl(0, 100%, 68%, 0.8);
+          }
+        }
+        p {
+          letter-spacing: 0.3rem;
+        }
       }
     }
   }

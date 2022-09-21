@@ -21,6 +21,7 @@ body {
   flex-direction: column;
   position: relative;
   color: hsl(231deg, 7%, 65%);
+  overflow-x: hidden;
 }
 body::before {
   content: "";
@@ -37,6 +38,7 @@ body::before {
 .container {
   max-width: 110rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 
 header {
@@ -47,16 +49,50 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 header .container picture img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header .container nav .menuDesktop {
+  display: flex;
+}
+@media only screen and (max-width: 400px) {
+  header .container nav .menuDesktop {
+    display: none;
+  }
+}
+header .container nav .menuMobile {
+  display: none;
+}
+@media only screen and (max-width: 400px) {
+  header .container nav .menuMobile {
+    display: inherit;
+  }
 }
 header .container nav ul {
   display: flex;
   gap: 5rem;
+}
+header .container nav ul.menuMobile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 90%;
+  text-align: center;
+  gap: 0;
+  padding: 2rem;
+  font-size: 2rem;
+  box-shadow: 2px 2px 15px rgba(84, 84, 84, 0.22);
+}
+@media only screen and (max-width: 400px) {
+  header .container nav ul li {
+    padding: 2rem 1rem;
+  }
 }
 header .container nav ul li a {
   text-transform: uppercase;
@@ -68,6 +104,12 @@ header .container nav ul li.acc-button {
   list-style: disc;
   color: hsl(231deg, 7%, 65%);
 }
+@media only screen and (max-width: 400px) {
+  header .container nav ul li.acc-button {
+    list-style: none;
+    border-top: 1px solid hsl(231deg, 7%, 65%);
+  }
+}
 header .container nav ul li.acc-button a {
   color: hsl(231deg, 7%, 65%);
 }
@@ -78,6 +120,11 @@ header .container nav ul li a:hover {
 section.intro-banner .container {
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 400px) {
+  section.intro-banner .container {
+    flex-direction: column-reverse;
+  }
 }
 section.intro-banner .container .text-content,
 section.intro-banner .container picture {
@@ -95,9 +142,10 @@ section.intro-banner .container .text-content {
 }
 section.intro-banner .container .text-content .sub-title {
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
   color: hsl(231deg, 7%, 65%);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-family: "Barlow Condensed", sans-serif;
 }
 section.intro-banner .container .text-content .badge::before {
   content: "New";
@@ -109,7 +157,7 @@ section.intro-banner .container .text-content .badge::before {
   letter-spacing: 0.2rem;
   font-weight: 700;
   color: white;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 section.intro-banner .container .text-content h1 {
   font-family: "Barlow Condensed", sans-serif;
@@ -117,4 +165,28 @@ section.intro-banner .container .text-content h1 {
   font-size: 6rem;
   text-transform: uppercase;
   color: hsl(230deg, 29%, 20%);
+}
+section.intro-banner .container .text-content .btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+section.intro-banner .container .text-content .btn a {
+  background: hsl(0deg, 100%, 68%);
+  padding: 1.5rem 3.2rem;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid hsl(231deg, 7%, 65%);
+  letter-spacing: 0.1rem;
+  transition: 300ms ease-in-out;
+}
+section.intro-banner .container .text-content .btn a:hover {
+  background-color: hsla(0deg, 100%, 68%, 0.8);
+}
+section.intro-banner .container .text-content .btn p {
+  letter-spacing: 0.3rem;
 }/*# sourceMappingURL=style.css.map */
