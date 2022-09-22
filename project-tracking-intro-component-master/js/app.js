@@ -2,10 +2,11 @@ const menuToggleBtn = document.querySelector(".menuMobile img");
 const menuMobile = document.querySelector("ul.menuDesktop");
 
 menuToggleBtn.addEventListener("click", function () {
-  if (menuToggleBtn.src == "/images/icon-hamburger.svg") {
-    menuToggleBtn.src = "/images/icon-close.svg";
-    console.log("açtık");
+  if (menuMobile.classList.contains("menuMobile")) {
+    menuMobile.classList.remove("menuMobile");
+    menuToggleBtn.src = "/images/icon-hamburger.svg";
   } else {
-    console.log("kapadık");
+    menuMobile.classList.add("menuMobile");
+    menuToggleBtn.src = "/images/icon-close.svg";
   }
 });
