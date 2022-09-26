@@ -130,6 +130,7 @@ section.intro-banner {
     align-items: center;
     @media only screen and (max-width: 400px) {
       flex-direction: column-reverse;
+      gap: 3rem;
     }
     .text-content,
     picture {
@@ -169,6 +170,9 @@ section.intro-banner {
         font-size: 6rem;
         text-transform: uppercase;
         color: $veryDarkBlue;
+        @media only screen and (max-width: 400px) {
+          font-size: 4rem;
+        }
       }
 
       .btn {
@@ -179,6 +183,10 @@ section.intro-banner {
         text-transform: uppercase;
         margin-top: 2rem;
         font-size: 1.5rem;
+        white-space: nowrap;
+        @media only screen and (max-width: 400px) {
+          font-size: 1.2rem;
+        }
         a {
           background: $primaryColor;
           padding: 1.5rem 3.2rem;
@@ -187,6 +195,10 @@ section.intro-banner {
           border: 1px solid $greyBlue;
           letter-spacing: 0.1rem;
           transition: 300ms ease-in-out;
+          font-weight: 700;
+          @media only screen and (max-width: 400px) {
+            padding: 1.5rem 2rem;
+          }
           &:hover {
             background-color: hsl(0, 100%, 68%, 0.8);
           }
