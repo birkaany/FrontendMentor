@@ -7,10 +7,6 @@ module.exports = {
       raleway: ["Raleway", "sans-serif"],
     },
     extend: {
-      backgroundImage: {
-        bgCurveMobile: "url('images/bg-curve-mobile.svg')",
-        bgCurveDesktop: "url('images/bg-curve-desktop.svg')",
-      },
       colors: {
         veryDarkblue: "hsl(243, 87%, 12%)",
         dsBlue: "hsl(238, 22%, 44%)",

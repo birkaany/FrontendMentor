@@ -8,7 +8,7 @@
     @apply text-dsBlue;
   }
   p {
-    @apply text-lg font-medium mt-4;
+    @apply text-lg font-medium;
   }
   .main-nav .nav-item {
     @apply font-raleway font-thin text-dsBlue text-sm md:text-lg;
@@ -18,5 +18,8 @@
   }
   .logo-white {
     filter: brightness(0) invert(1);
+  }
+  .social-icon {
+    @apply max-w-[2rem];
   }
 }

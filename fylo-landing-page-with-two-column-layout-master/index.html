@@ -48,9 +48,12 @@
         <div class="w-full flex flex-col gap-2 text-center md:text-left md:pr-8 md:w-1/2">
           <h1 class="text-5xl font-bold text-veryDarkblue my-8">All your files in one secure location, accessible anywhere.</h1>
           <p class="">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
-          <form action="" class="flex max-w-full md:flex-row md:space-x-3 md:max-w-lg">
+          <form action="" class="flex flex-col max-w-full md:flex-row md:space-x-3 md:max-w-lg">
             <input type="email" id="email" placeholder="Enter your email..." class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 md:w-3/5" />
-            <input type="button" value="Get Started" class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway md:w-2/5" />
+            <input
+              type="button"
+              value="Get Started"
+              class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway md:w-2/5 transition ease-in-out hover:opacity-50 hover:scale-105 hover:duration-700" />
           </form>
         </div>
         <div class="w-full md:w-1/2">
@@ -66,14 +69,14 @@
     <section class="review bg-lightBlue relative">
       <div class="container flex flex-col-reverse pb-8 md:pb-32 md:flex-row">
         <div class="w-full text-content flex flex-col items-center justify-center md:w-1/2 md:items-start">
-          <h2 class="text-2xl font-bold text-veryDarkblue my-8 md:text-5xl">Stay productive, wherever you are</h2>
+          <h2 class="text-2xl text-center font-bold text-veryDarkblue my-8 md:text-5xl md:text-left">Stay productive, wherever you are</h2>
           <p class="md:max-w-2xl">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
           <p class="md:max-w-2xl">Securely share files and folders with friends, family and colleagues for live collaboration.</p>
-          <button class="flex items-center gap-2 text-dsCyan border-b-2 border-dsCyan py-2 my-6">
+          <button class="flex items-center gap-2 text-dsCyan border-b-2 border-dsCyan py-2 my-6 transition ease-in-out hover:brightness-110 hover:cursor-pointer">
             See how Fylo works
             <img src="/images/icon-arrow.svg" alt="" />
           </button>
-          <div class="testimonal-card flex flex-col items-start p-8 m-8 space-y-3 bg-white shadow-md rounded-md md:m-0">
+          <div class="testimonal-card w-full flex flex-col items-start p-8 space-y-3 bg-white shadow-md rounded-md md:m-0 md:max-w-md">
             <img src="/images/icon-quotes.svg" alt="" />
             <p class="text-sm mt-0 md:max-w-sm">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <div class="testimonial-author flex flex-row space-x-3">
@@ -90,49 +93,49 @@
 
     <section class="flex flex-col text-white text-center justify-center bg-dsBlue">
       <div class="container flex flex-col justify-center items-center my-16 space-y-4 md:flex-row">
-        <div class="w-full flex flex-col md:w-1/2">
-          <h2 class="text-2xl">Get early access today</h2>
-          <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+        <div class="w-full flex flex-col md:w-1/2 md:text-left">
+          <h2 class="text-2xl font-medium">Get early access today</h2>
+          <p class="font-light max-w-md">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
         </div>
 
         <form action="" class="w-full flex flex-col md:w-1/2">
-          <input type="email" id="email" placeholder="email@example.com" class="w-3/4 border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3" />
-          <input type="button" value="Get started for free" class="w-3/4 bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway capitalize" />
+          <input type="email" id="email" placeholder="email@example.com" class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 md:max-w-md" />
+          <input type="button" value="Get started for free" class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway capitalize md:max-w-md" />
         </form>
       </div>
     </section>
 
-    <footer class="flex justify-center bg-veryDarkblue text-white">
-      <div class="container">
-        <div class="flex flex-col">
-          <img src="/images/logo.svg" alt="logo" class="logo-white w-[12rem]" />
-          <p class="flex items-center">
+    <footer class="flex flex-col justify-center pt-10 pb-20 bg-veryDarkblue text-lightBlue font-thin font-raleway">
+      <div class="container py-6"><img src="/images/logo.svg" alt="logo" class="logo-white w-[12rem]" /></div>
+      <div class="container flex flex-col justify-between items-start md:flex-row space-y-12">
+        <div class="flex flex-col w-full md:w-1/4">
+          <p class="flex items-center font-light gap-3">
             <span><img src="/images/icon-phone.svg" alt="" /></span>Phone:
-            <a href="tel:+15431234567">+1-543-123-4567</a>
+            <a href="tel:+15431234567" class="font-light">+1-543-123-4567</a>
           </p>
-          <p class="flex items-center">
-            <span><img src="/images/icon-email.svg" alt="" /></span><a href="mailto:email@example.com">email@example.com</a>
+          <p class="flex items-center gap-3">
+            <span><img src="/images/icon-email.svg" alt="" /></span><a href="mailto:email@example.com" class="font-light">email@example.com</a>
           </p>
         </div>
-        <nav>
-          <ul class="flex flex-col">
-            <li>About Us</li>
+        <nav class="w-full md:w-1/4">
+          <ul class="flex flex-col space-y-3 font-thin">
+            <li class="font-extralight">About Us</li>
             <li>Jobs</li>
             <li>Press</li>
             <li>Blog</li>
           </ul>
         </nav>
-        <nav>
+        <nav class="w-full md:w-1/4">
           <ul class="flex flex-col">
             <li>Contact Us</li>
             <li>Terms</li>
             <li>Privacy</li>
           </ul>
         </nav>
-        <ul class="social-icons">
-          <li><img src="/images/" alt="" /></li>
-          <li><img src="#" alt="" /></li>
-          <li><img src="#" alt="" /></li>
+        <ul class="social-icons flex flex-row w-full space-x-3 md:w-1/4 md:self-center">
+          <li class="social-icon"><img src="/images/icons8-facebook-circled.svg" alt="" class="logo-white" /></li>
+          <li class="social-icon"><img src="/images/icons8-twitter-circled.svg" alt="" class="logo-white" /></li>
+          <li class="social-icon"><img src="/images/icons8-instagram-circle.svg" alt="" class="logo-white" /></li>
         </ul>
       </div>
     </footer>
