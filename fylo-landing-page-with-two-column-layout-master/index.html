@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="/dist/output.css" />
 
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
@@ -29,11 +24,11 @@
   <body class="">
     <header>
       <div class="container mx-auto my-8 flex items-center justify-between">
-        <picture class="max-w-[7rem]">
+        <picture class="max-w-[5rem] md:max-w-lg">
           <img src="/images/logo.svg" alt="" class="object-cover" />
         </picture>
         <nav class="main-nav">
-          <ul class="flex space-x-8">
+          <ul class="flex space-x-4 md:space-x-8">
             <li class="nav-item">
               <a href="#">Features</a>
             </li>
@@ -49,130 +44,97 @@
     </header>
 
     <main>
-      <section
-        class="container mx-auto flex flex-col-reverse items-center my-16 md:flex-row md:flex-"
-      >
-        <div class="flex flex-col my-8 basis-1/2">
-          <h1 class="text-center text-4xl font-bold text-veryDarkblue my-8">
-            All your files in one secure location, accessible anywhere
-          </h1>
-          <p class="text-center">
-            Fylo stores your most important files in one secure location. Access
-            them wherever you need, share and collaborate with friends, family,
-            and co-workers.
-          </p>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email..."
-            class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 "
-          />
-          <input
-            type="button"
-            value="Get Started"
-            class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway"
-          />
+      <section class="container flex flex-col-reverse items-center my-16 md:flex-row md:flex">
+        <div class="w-full flex flex-col gap-2 text-center md:text-left md:pr-8 md:w-1/2">
+          <h1 class="text-5xl font-bold text-veryDarkblue my-8">All your files in one secure location, accessible anywhere.</h1>
+          <p class="">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+          <form action="" class="flex max-w-full md:flex-row md:space-x-3 md:max-w-lg">
+            <input type="email" id="email" placeholder="Enter your email..." class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 md:w-3/5" />
+            <input type="button" value="Get Started" class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway md:w-2/5" />
+          </form>
         </div>
-        <div class=" basis-1/2">
-        <img src="/images/illustration-1.svg" alt="" class="" />
-      </div>
+        <div class="w-full md:w-1/2">
+          <img src="/images/illustration-1.svg" alt="" class="max-w-full" />
+        </div>
       </section>
     </main>
 
-    <section class="review bg-lightBlue">
-      <div class="container flex flex-col-reverse">
-        <div class="text-content flex flex-col items-center justify-center">
-          <h2 class="text-center text-2xl font-bold text-veryDarkblue my-8">
-            Stay productive, wherever you are
-          </h2>
-          <p class="text-left">
-            Never let location be an issue when accessing your files. Fylo has
-            you covered for all of your file storage needs.
-          </p>
-          <p class="text-left mt-3">
-            ecurely share files and folders with friends, family and colleagues
-            for live collaboration.
-          </p>
-          <button class="text-dsCyan border-b p-2 my-6">
+    <picture>
+      <source media="(max-w-screen-sm)" srcset="/images/bg-curve-mobile.svg" />
+      <img src="/images/bg-curve-desktop.svg" alt="" class="w-full" />
+    </picture>
+    <section class="review bg-lightBlue relative">
+      <div class="container flex flex-col-reverse pb-8 md:pb-32 md:flex-row">
+        <div class="w-full text-content flex flex-col items-center justify-center md:w-1/2 md:items-start">
+          <h2 class="text-2xl font-bold text-veryDarkblue my-8 md:text-5xl">Stay productive, wherever you are</h2>
+          <p class="md:max-w-2xl">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+          <p class="md:max-w-2xl">Securely share files and folders with friends, family and colleagues for live collaboration.</p>
+          <button class="flex items-center gap-2 text-dsCyan border-b-2 border-dsCyan py-2 my-6">
             See how Fylo works
+            <img src="/images/icon-arrow.svg" alt="" />
           </button>
-          <div
-            class="testimonal-card flex flex-col items-start p-8 m-8 space-y-3 bg-white shadow-md rounded-md"
-          >
+          <div class="testimonal-card flex flex-col items-start p-8 m-8 space-y-3 bg-white shadow-md rounded-md md:m-0">
             <img src="/images/icon-quotes.svg" alt="" />
-            <p class=" text-sm mt-0">
-              Fylo has improved our team productivity by an order of magnitude.
-              Since making the switch our team has become a well-oiled
-              collaboration machine.
-            </blockquote>
+            <p class="text-sm mt-0 md:max-w-sm">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <div class="testimonial-author flex flex-row space-x-3">
               <div class="rounded-full overflow-hidden max-w-[3rem]">
-                <img
-                  src="/images/avatar-testimonial.jpg"
-                  alt="avatar"
-                  class="cover"
-                />
+                <img src="/images/avatar-testimonial.jpg" alt="avatar" class="cover" />
               </div>
-              <h3 class="flex flex-col justify-center font-bold text-sm">
-                Kyle Burton<span class="font-light text-xs"
-                  >Founder & CEO, Huddle</span
-                >
-              </h3>
+              <h3 class="flex flex-col justify-center font-bold text-sm">Kyle Burton<span class="font-light text-xs">Founder & CEO, Huddle</span></h3>
             </div>
           </div>
         </div>
-        <img src="/images/illustration-2.svg" alt="" />
+        <img src="/images/illustration-2.svg" alt="" class="w-full md:w-1/2" />
       </div>
     </section>
 
     <section class="flex flex-col text-white text-center justify-center bg-dsBlue">
-      <div class="container flex flex-col justify-center items-center my-16 space-y-4 ">
-        <h2 class="text-2xl">Get early access today</h2>
-        <p>It only takes a minute to sign up and our free starter tier is
-          extremely generous. If you have any questions, our support team would be
-          happy to help you.</p>
-          <input
-            type="email"
-            id="email"
-            placeholder="email@example.com"
-            class="w-3/4 border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 "
-          />
-          <input
-            type="button"
-            value="Get started for free"
-            class="w-3/4 bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway capitalize"
-          />
+      <div class="container flex flex-col justify-center items-center my-16 space-y-4 md:flex-row">
+        <div class="w-full flex flex-col md:w-1/2">
+          <h2 class="text-2xl">Get early access today</h2>
+          <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+        </div>
+
+        <form action="" class="w-full flex flex-col md:w-1/2">
+          <input type="email" id="email" placeholder="email@example.com" class="w-3/4 border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3" />
+          <input type="button" value="Get started for free" class="w-3/4 bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway capitalize" />
+        </form>
       </div>
     </section>
 
     <footer class="flex justify-center bg-veryDarkblue text-white">
       <div class="container">
         <div class="flex flex-col">
-          <img src="/images/logo.svg" alt="logo" class="logo-white w-[12rem]">
-          <p class="flex items-center"><span><img src="/images/icon-phone.svg" alt=""></span>Phone: <a href="tel:+15431234567">+1-543-123-4567</a></p>
-          <p class="flex items-center"><span><img src="/images/icon-email.svg" alt=""></span><a href="mailto:email@example.com">email@example.com</a></p>
+          <img src="/images/logo.svg" alt="logo" class="logo-white w-[12rem]" />
+          <p class="flex items-center">
+            <span><img src="/images/icon-phone.svg" alt="" /></span>Phone:
+            <a href="tel:+15431234567">+1-543-123-4567</a>
+          </p>
+          <p class="flex items-center">
+            <span><img src="/images/icon-email.svg" alt="" /></span><a href="mailto:email@example.com">email@example.com</a>
+          </p>
         </div>
         <nav>
-        <ul class="flex flex-col">
+          <ul class="flex flex-col">
             <li>About Us</li>
             <li>Jobs</li>
             <li>Press</li>
             <li>Blog</li>
-        </ul>
-      </nav>
-      <nav>
-        <ul class="flex flex-col">
+          </ul>
+        </nav>
+        <nav>
+          <ul class="flex flex-col">
             <li>Contact Us</li>
             <li>Terms</li>
             <li>Privacy</li>
+          </ul>
+        </nav>
+        <ul class="social-icons">
+          <li><img src="/images/" alt="" /></li>
+          <li><img src="#" alt="" /></li>
+          <li><img src="#" alt="" /></li>
         </ul>
-      </nav>
-      <ul class="social-icons">
-        <li><img src="/images/" alt=""></li>
-        <li><img src="#" alt=""></li>
-        <li><img src="#" alt=""></li>
-      </ul>
-      </div>  
+      </div>
     </footer>
 
     <!--   S No email attachments required!
@@ -183,11 +145,7 @@
     <footer>
       <p class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://github.com/birkaany/" target="_blank">Birkan Yilmaz</a
-        >.
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/birkaany/" target="_blank">Birkan Yilmaz</a>.
       </p>
     </footer>
   </body>

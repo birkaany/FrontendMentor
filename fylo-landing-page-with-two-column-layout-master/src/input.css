@@ -8,13 +8,13 @@
     @apply text-dsBlue;
   }
   p {
-    @apply text-lg;
+    @apply text-lg font-medium mt-4;
   }
   .main-nav .nav-item {
-    @apply font-raleway font-thin text-dsBlue;
+    @apply font-raleway font-thin text-dsBlue text-sm md:text-lg;
   }
   .container {
-    @apply px-8;
+    @apply px-8 mx-auto md:px-0;
   }
   .logo-white {
     filter: brightness(0) invert(1);
