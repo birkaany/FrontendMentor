@@ -48,13 +48,15 @@
         <div class="w-full flex flex-col gap-2 text-center md:text-left md:pr-8 md:w-1/2">
           <h1 class="text-5xl font-bold text-veryDarkblue my-8">All your files in one secure location, accessible anywhere.</h1>
           <p class="">Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
-          <form action="" class="flex flex-col max-w-full md:flex-row md:space-x-3 md:max-w-lg">
-            <input type="email" id="email" placeholder="Enter your email..." class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 md:w-3/5" />
+          <form name="mailList" action="" onsubmit="return validMail()" class="flex flex-col max-w-full md:flex-row md:space-x-3 md:max-w-lg">
+            <input type="email" id="email" name="email" placeholder="Enter your email..." class="w-full border border-dsBlue text-black placeholder:text-lightGray rounded py-3 px-6 mt-3 md:w-3/" />
             <input
-              type="button"
+              type="submit"
+              id="submitMail"
               value="Get Started"
               class="w-full bg-brightblue rounded py-3 px-6 mt-3 text-lightBlue text-lg font-bold font-raleway md:w-2/5 transition ease-in-out hover:opacity-50 hover:scale-105 hover:duration-700" />
           </form>
+          <p class="mailAlert font-light text-sm text-red-600 hidden">Please check your email</p>
         </div>
         <div class="w-full md:w-1/2">
           <img src="/images/illustration-1.svg" alt="" class="max-w-full" />
@@ -139,17 +141,6 @@
         </ul>
       </div>
     </footer>
-
-    <!--   S No email attachments required!
-    See how Fylo works   Kyle Burton Founder & CEO, Huddle Get early access
-    today  Get Started For Free Phone: +1-543-123-4567
-    example@fylo.com About Us Jobs Press Blog Contact Us Terms Privacy -->
-
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/birkaany/" target="_blank">Birkan Yilmaz</a>.
-      </p>
-    </footer>
+    <script src="/js/validate-mail.js"></script>
   </body>
 </html>
