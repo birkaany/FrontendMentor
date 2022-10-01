@@ -658,6 +658,10 @@ body{
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -666,10 +670,22 @@ body{
   justify-content: space-between;
 }
 
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+
+.self-end{
+  align-self: flex-end;
+}
+
+.justify-self-end{
+  justify-self: end;
 }
 
 .overflow-hidden{
@@ -721,6 +737,22 @@ body{
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\/images\/pattern-background-mobile\.svg\'\)\]{
+  background-image: url('/images/pattern-background-mobile.svg');
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-contain{
+  background-size: contain;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .p-3{
@@ -1027,4 +1059,26 @@ body{
 .hover\:text-blue-500:hover{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .md\:max-w-md{
+    max-width: 28rem;
+  }
+
+  .md\:bg-\[url\(\'\/images\/pattern-background-desktop\.svg\'\)\]{
+    background-image: url('/images/pattern-background-desktop.svg');
+  }
+
+  .md\:bg-center{
+    background-position: center;
+  }
+
+  .md\:bg-top{
+    background-position: top;
+  }
+
+  .md\:bg-bottom{
+    background-position: bottom;
+  }
 }
