@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="/dist/output.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex justify-center items-center">
+    <main class="container max-w-xs">
+      <div class="grid grid-cols-1 grid-rows-[auto_auto] space-y-0 bg-white shadow-2xl shadow-dsBlue rounded-b-xl">
+        <div class="img rounded-t-xl overflow-hidden">
+          <img src="/images/illustration-hero.svg" alt="" class="" />
+        </div>
+        <div class="flex flex-col px-6 py-6 justify-center">
+          <h1 class="text-center text-2xl font-bold text-darkBlue">Order Summary</h1>
+          <p class="text-center text-dsBlue pt-3 py-6 leading-relaxed">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+          <div class="flex flex-col">
+            <div class="rounded-xl bg-veryPaleblue flex items-center justify-between p-4">
+              <img src="/images/icon-music.svg" alt="" />
+              <div class="flex flex-col">
+                <h2 class="font-bold">Annual Plan</h2>
+                <p class="font-thin text-sm text-dsBlue">$59.99/year</p>
+              </div>
+              <a href="#" class="text-sm underline text-brightBlue font-bold hover:text-veryPaleblue">Change</a>
+            </div>
+            <a href="#" class="primaryBtn rounded-xl bg-brightBlue text-white px-3 py-3 mt-6 text-center font-bold shadow-2xl shadow-dsBlue">Proceed to Payment</a>
+            <a href="#" class="font-bold text-center text-dsBlue mt-6">Cancel Order</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  Order Summary You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like! Annual Plan $59.99/year Change Proceed to Payment Cancel Order
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div> -->
+  </body>
 </html>
