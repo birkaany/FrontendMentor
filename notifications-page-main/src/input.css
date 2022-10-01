@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Jakarta text-base;
+  }
+  p a {
+    @apply transition-all duration-300 ease-in-out hover:text-blue;
+  }
+}
