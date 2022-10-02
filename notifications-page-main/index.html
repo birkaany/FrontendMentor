@@ -12,8 +12,8 @@
     <main id="notification-component" class="bg-white shadow-xl shadow-lightGrayishBlue2 max-w-md my-3 rounded-lg md:max-w-3xl">
       <div class="container">
         <header class="flex items-center justify-between px-6 py-6">
-          <h1 class="text-xl font-bold leading-3">Notifications <span class="text-white bg-blue text-base rounded-md px-2 py-0">3</span></h1>
-          <p class="text-grayishBlue">
+          <h1 class="text-xl font-bold leading-3">Notifications <span id="notification-counter" class="text-white bg-blue text-base rounded-md px-2 py-0"></span></h1>
+          <p id="btn-MarkAllRead" class="text-grayishBlue">
             <a href="#">Mark as all read</a>
           </p>
         </header>
@@ -21,40 +21,44 @@
           <!-- Notification list -->
           <ul>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-mark-webber.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
                 <p class="text-darkGrayishBlue">
-                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Mark Weber</a> reacted to your recent post <a href="#" class="font-bold">My first tournement today!</a>
+                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Mark Weber</a> reacted to your recent post <a href="#" class="font-bold">My first tournement today!</a
+                  ><span class="unreadDot"></span>
                 </p>
                 <p class="font-thin text-grayishBlue">1m ago</p>
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-angela-gray.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
-                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Angela Gray</a> followed you</p>
+                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Angela Gray</a> followed you<span class="unreadDot"></span></p>
+
                 <p class="font-thin text-grayishBlue">5m ago</p>
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-jacob-thompson.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
-                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Jacob Thompson</a> has joined your group <a href="#" class="font-bold">Chess Club</a></p>
+                <p class="text-darkGrayishBlue">
+                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Jacob Thompson</a> has joined your group <a href="#" class="font-bold">Chess Club</a><span class="unreadDot"></span>
+                </p>
                 <p class="font-thin text-grayishBlue">1 day ago</p>
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
-                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Rizky Hasanuddin</a> sent you a private message</p>
+                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Rizky Hasanuddin</a> sent you a private message<span class="unreadDot"></span></p>
                 <p class="font-thin text-grayishBlue">5 days ago</p>
                 <p class="private-message border rounded-md border-lightGrayishBlue2 hover:cursor-pointer p-3 mt-3 text-darkGrayishBlue hover:bg-lightGrayishBlue2 hover:cursor-pointer">
                   Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
@@ -62,12 +66,12 @@
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-kimberly-smith.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
                 <div class="flex justify-between">
-                  <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Kimberly Smith</a> commented on your picture</p>
+                  <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Kimberly Smith</a> commented on your picture<span class="unreadDot"></span></p>
                   <img src="/assets/images/image-chess.webp" alt="" class="h-8 w-8 justify-self-end" />
                 </div>
 
@@ -75,22 +79,25 @@
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-nathan-peterson.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
                 <p class="text-darkGrayishBlue">
-                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Nathan Peterson</a> reacted to your recent post <a href="#" class="font-bold">5 end-game strategies to increas your win rate</a>
+                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Nathan Peterson</a> reacted to your recent post <a href="#" class="font-bold">5 end-game strategies to increas your win rate</a
+                  ><span class="unreadDot"></span>
                 </p>
                 <p class="font-thin text-grayishBlue">2 weeks ago</p>
               </div>
             </li>
             <!-- Notification item -->
-            <li class="flex items-start p-3 space-x-3 bg-veryLightGrayishBlue rounded-lg mx-6 my-3">
+            <li class="unread notification bg-veryLightGrayishBlue">
               <img src="/assets/images/avatar-anna-kim.webp" alt="" class="h-10" />
               <!-- Notification text -->
               <div class="flex flex-col w-full">
-                <p class="text-darkGrayishBlue"><a href="#" class="font-bold mr-1 text-veryDarkBlue">Anna Kim</a> left the group <a href="#" class="font-bold">Chess Club</a></p>
+                <p class="text-darkGrayishBlue">
+                  <a href="#" class="font-bold mr-1 text-veryDarkBlue">Anna Kim</a> left the group <a href="#" class="font-bold">Chess Club</a><span class="unreadDot"></span>
+                </p>
                 <p class="font-thin text-grayishBlue">2 weeks ago</p>
               </div>
             </li>
@@ -98,37 +105,6 @@
         </section>
       </div>
     </main>
+    <script src="/js/app.js"></script>
   </body>
 </html>
-
-<!-- Notifications 3
-
-  Mark all as read
-
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
-
-  Angela Gray followed you
-  5m ago
-
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
-
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->

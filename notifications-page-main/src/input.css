@@ -12,3 +12,12 @@
     @apply transition-all duration-300 ease-in-out hover:text-blue;
   }
 }
+
+@layer components {
+  .unreadDot {
+    @apply inline-block w-2 h-2 bg-red rounded-full ml-3;
+  }
+  .notification {
+    @apply flex items-start p-3 space-x-3 rounded-lg mx-6 my-3 hover:cursor-pointer;
+  }
+}
